@@ -99,36 +99,50 @@
 		"error_msg": ""    // 错误提示信息
 		"msg": [
 			{
-				catelog_id: 	"10",
-				catelog_name:	"Mobile Phone",
-				catelog_sub:[
+				Id: 	"10",
+				Name:	"Mobile Phone",
+				Domain: "photo",
+				Image: "mobile-phone",
+				SubCategory:[
 					{
-						catelog_id: 	"111",
-						catelog_name:	"iPhone",
-						catelog_sub:[
+						Id: 	"111",
+						Name:	"iPhone",
+						Domain: "photo",
+						Image: "iphone"
+						SubCategory:[
 							{
-								catelog_id: 	"1111",
-								catelog_name:	"iPhone 4",
+								Id: 	"1111",
+								Name:	"iPhone 4",
+								Domain: "photo"
+								Image: "iphone-4"
 							},
 							{
-								catelog_id: 	"1112",
-								catelog_name:	"iPhone 5",
+								Id: 	"112",
+								Name:	"iPhone 5",
+								Domain: "photo"
+								Image: "iphone-5"
 							},
 							{},
 							{}...
 						]
 					},
 					{
-						catelog_id: 	"112",
-						catelog_name:	"Nokia",
+						Id: 	"112",
+						Name:	"iPhone2",
+						Domain: "photo2",
+						Image: "iphone2",
+						SubCategory:{....}
 					},
 					{},
 					{}...
 				]
 			},
 			{
-				catelog_id: 	"11",
-				catelog_name:	"Memery Cards",
+				Id: 	"11",
+				Name:	"Memery Cards",
+				Domain: "photo",
+				Image: "memory-cards",
+				SubCategory: {...}
 			},
 			{},
 			{},
