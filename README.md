@@ -189,7 +189,28 @@
 		]
 	}
 	
-#搜索
+#搜索-关键字列表
+
+> 用户点击搜索，返回查询结果列表
+
+	GET http://www.esaleschina.com/api/search-keyword-list.php
+
+	- parame key_word string 搜索的关键词
+	
+返回Json格式的数据
+
+	{
+		"status": 1 ,      // 获取成功：1，获取失败：0
+		"error_msg": ""    // 例如一共就10页，客户端提交请求11页，则返回错误提示信息
+		"msg": [
+			{
+				Name: "xxxx" //关键字
+			},
+			{},{},{}...
+		]
+	}
+	
+#搜索-产品列表
 
 > 用户点击搜索，返回查询结果列表
 
@@ -197,6 +218,37 @@
 
 	- parame key_word string 搜索的关键词
 	- parame page string 页码
+	- 产品图片:http://{Domain}.esaleschina.com/{Id}/{Image}-s.jpg
+	
+返回Json格式的数据
+
+	{
+		"status": 1 ,      // 获取成功：1，获取失败：0
+		"error_msg": ""    // 例如一共就10页，客户端提交请求11页，则返回错误提示信息
+		"msg": [
+			{
+				Id: 	"1",
+				NameAlias:	"iPhone-5", //html静态页文件名
+				Name: "xxxx" //产品名称
+				Image:	"free-shipping-iphone-5-case-iphone-5-skin-colorful-translucent-18242-m.jpg",
+				UnitPrice: "$230.0", //单价
+				UnitPriceDiscount: "$110.00", //如果没有特价，就留空				
+				SaveRate: "20%" //优惠比率
+				Domain: "photo" //图片域名
+				HtmlPath: "202" //产品静态html存放路径 
+				DHL_EMS_FreeShipping: "1" //0:Free Shipping 1:DHL/EMS Free Shipping
+			},
+			{},{},{}...
+		]
+	}
+
+#产品详细页
+
+> 用户点击搜索，返回查询结果列表
+
+	GET http://www.esaleschina.com/api/item-detail.php
+
+	- parame prod_id string 搜索的关键词	
 	- 产品图片:http://{Domain}.esaleschina.com/{Id}/{Image}-s.jpg
 	
 返回Json格式的数据
