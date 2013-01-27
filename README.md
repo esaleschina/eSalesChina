@@ -61,13 +61,12 @@
 	}
 
 
-#获取 HOT 产品列表
+#获取 Specails 产品列表
 
 > 用户点击底部菜单“HOT”,查看 HOT 产品列表
 
-	GET http://www.esales.com/xxx
-
-	- parame page string 页码
+	GET http://www.esaleschina.com/api/specails.php
+	产品图片:http://{Domain}.esaleschina.com/{HtmlPath}/{Image}
 
 返回Json格式的数据
 
@@ -76,13 +75,16 @@
 		"error_msg": ""    // 例如一共就10页，客户端提交请求11页，则返回错误提示信息
 		"msg": [
 			{
-				product_id: 	"1",
-				product_title:	"iPhone 5",
-				product_description: "xxxx"
-				product_price:	"$230.00",
-				product_special_offer:	"$110.00", //如果没有特价，就留空
-				product_save: "20.00 %", //如果没有，就留空
-				product_shipping: "DHL/EMS FREE SHIPPING"
+				Id: 	"1",
+				NameAlias:	"iPhone-5", //html静态页文件名
+				Name: "xxxx" //产品名称
+				Image:	"free-shipping-iphone-5-case-iphone-5-skin-colorful-translucent-18242-m.jpg",
+				UnitPrice: "$230.0", //单价
+				UnitPriceDiscount: "$110.00", //如果没有特价，就留空				
+				SaveRate: "20%" //优惠比率
+				Domain: "photo" //图片域名
+				HtmlPath: "202" //产品静态html存放路径 
+				DHL_EMS_FreeShipping: "1" //0:Free Shipping 1:DHL/EMS Free Shipping
 			},
 			{},{},{}...
 		]
