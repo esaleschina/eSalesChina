@@ -88,7 +88,7 @@
 
 > 用户点击底部菜单“catelog”,查看 所有分类
 
-	GET http://www.esales.com/xxx
+	GET http://www.esales.com/api/category.php
 
 
 返回Json格式的数据
