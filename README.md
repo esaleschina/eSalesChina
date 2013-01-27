@@ -24,7 +24,7 @@
 #登录
 用户使用 eSalesChina 账号登录
 
-	POST http://www.esales.com/xxx
+	POST http://www.esaleschina.com/api/sign-in.php
 
 	- parame username string 用户名
 	- parame password string 密码
@@ -35,8 +35,12 @@
 		"status": 1 ,      // 登录成功：1，登录失败：0
 		"error_msg": ""    // 失败的提示信息，无则为""
 		"msg": {
-			"user_id": "1",   //用户id
-			"user_name": "xx" //用户名
+			"Id": "1",   //用户id
+			"Email": "xx" //用户名
+			"Level": "1/2" //级别 Buyer=1 Reseller=2
+			"FirstName": "Alex" //名字
+			"LastName": "Ke" //姓
+			"Check": "0/1" //是否审核 目前不用做判别 以后拓展
 		}
 	}
 
