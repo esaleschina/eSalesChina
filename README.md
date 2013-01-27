@@ -63,7 +63,7 @@
 
 #获取 Specails 产品列表
 
-> 用户点击底部菜单“HOT”,查看 HOT 产品列表
+> 用户点击底部菜单“Specails”,查看 Specails 产品列表
 
 	GET http://www.esaleschina.com/api/specails.php
 	产品图片:http://{Domain}.esaleschina.com/{HtmlPath}/{Image}
@@ -90,9 +90,9 @@
 		]
 	}
 
-#获取所有 catelog 列表
+#获取所有 Catelogs 列表
 
-> 用户点击底部菜单“catelog”,查看 所有分类
+> 用户点击底部菜单“Catelogs”,查看 所有分类
 
 	GET http://www.esaleschina.com/api/category.php
 	分类图片:http://usa.esaleschina.com/categories/{Id}/{Image}-s.jpg	
