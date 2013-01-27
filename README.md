@@ -89,7 +89,7 @@
 > 用户点击底部菜单“catelog”,查看 所有分类
 
 	GET http://www.esaleschina.com/api/category.php
-	图片:http://{Domain}.esaleschina.com/{Id}/{Image}-s.jpg
+	分类图片:http://usa.esaleschina.com/categories/{Id}/{Image}-s.jpg	
 
 
 返回Json格式的数据
@@ -159,6 +159,7 @@
 
 	- parame catelog_id string 该分类的 id
 	- parame page string 页码
+	- 产品图片:http://{Domain}.esaleschina.com/{Id}/{Image}-s.jpg
 	
 返回Json格式的数据
 
