@@ -164,6 +164,7 @@
 	GET http://www.esaleschina.com/api/search-item-by-category.php
 
 	- parame catelog_id string 该分类的 id
+	- parame s string 排序条件 best-match / lowest-price / highest-price / recently-listed
 	- parame page string 页码
 	- 产品图片:http://{Domain}.esaleschina.com/{Id}/{Image}-s.jpg
 	
@@ -217,6 +218,7 @@
 	GET http://www.esaleschina.com/api/search-item-by-keyword.php
 
 	- parame key_word string 搜索的关键词
+	- parame s string 排序条件 best-match / lowest-price / highest-price / recently-listed
 	- parame page string 页码
 	- 产品图片:http://{Domain}.esaleschina.com/{Id}/{Image}-s.jpg
 	
