@@ -244,11 +244,11 @@
 		]
 	}
 
-#产品详细页-基本信息 Basic
+#产品详细页
 
 > 用户点击搜索，返回查询结果列表
 
-	GET http://www.esaleschina.com/api/item-detail-basic.php
+	GET http://www.esaleschina.com/api/item-detail.php
 
 	- parame prod_id string 搜索的关键词	
 	- 产品小图:http://{Domain}.esaleschina.com/{Id}/{Image_m}
@@ -275,6 +275,12 @@
 				UnitPrice: "$230.0", //单价
 				UnitPriceDiscount: "$110.00", //如果没有特价，就留空				
 				SaveRate: "20%" //优惠比率
+				Qtys: [		//数量串
+					{1},{2},{4} 
+				]
+				Prices: [	//价格串,折后价
+					{1},{2},{4} 
+				]
 				Description: "xxxx" //产品详细描述
 				Domain: "photo" //图片域名
 				HtmlPath: "202" //产品静态html存放路径 
@@ -282,19 +288,4 @@
 			},
 			{},{},{}...
 		]
-	}
-#产品详细页-详细信息 Detail
-
-> 用户点击搜索，返回查询结果列表
-
-	GET http://www.esaleschina.com/api/item-detail-detail.php
-
-	- parame prod_id string 搜索的关键词	
-	
-返回Json格式的数据
-
-	{
-		"status": 1 ,      // 获取成功：1，获取失败：0
-		"error_msg": ""    // 例如一共就10页，客户端提交请求11页，则返回错误提示信息
-		"msg": "xxxx"	   // 商品详细页面
 	}
