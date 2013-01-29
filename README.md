@@ -290,3 +290,35 @@
 			{},{},{}...
 		]
 	}
+
+#购物车:获取与回写
+
+> 用户点击搜索，返回查询结果列表
+
+	GET http://www.esaleschina.com/api/shopping-cart.php
+
+	- parame t string 类型 1:获取 2:回写
+	- parame j string 回写购物车json串	
+	
+返回Json格式的数据
+
+	{
+		"status": 1 ,      // 获取成功：1，获取失败：0
+		"error_msg": ""    // 例如一共就10页，客户端提交请求11页，则返回错误提示信息
+		"msg": [
+			{
+				Id: 	"1", //产品ID
+				Qty:	"1", //数量
+				Price: "230" //单价
+				Name:	"xxx", //产品名称
+				aQtys: "1,2,3,5,7", //数量串
+				aDiscountPrices: "110.00,108.00,105.00,103.00,99.00", //价格串				
+				Weight: "2.5" //重量
+				L: "50" //长度
+				W: "30" //宽度
+				H: "20" //高度
+				Attributes: "xxxx" 配件串
+			},
+			{},{},{}...
+		]
+	}
