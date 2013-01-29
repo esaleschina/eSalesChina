@@ -51,7 +51,7 @@
 #退出登录
 用户退出 eSalesChina 账号登录
 
-	GET http://www.esales.com/xxx
+	GET http://www.esaleschina.com/api/sign-out.php
 	
 返回Json格式的数据
 
