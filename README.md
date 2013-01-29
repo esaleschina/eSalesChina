@@ -95,6 +95,7 @@
 > 用户点击底部菜单“Catelogs”,查看 所有分类
 
 	GET http://www.esaleschina.com/api/category.php
+	- parame par_id //父类Id 0时返回第一层及第二层 依次类推
 	分类图片:http://usa.esaleschina.com/categories/{Id}/{Image}-s.jpg	
 
 
