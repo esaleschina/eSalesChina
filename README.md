@@ -322,3 +322,52 @@
 			{},{},{}...
 		]
 	}
+
+#国家选项:
+
+> 获取国家选项,返回结果列表
+
+	GET http://www.esaleschina.com/api/country.php
+
+	
+返回Json格式的数据
+
+	{
+		"status": 1 ,      // 获取成功：1，获取失败：0
+		"error_msg": ""    // 例如一共就10页，客户端提交请求11页，则返回错误提示信息
+		"msg": [
+			{
+				Id: 	"1", //ID
+				ENName:	"1", //国家名称
+				Sort: "0" //排序字段,倒序+字母排序
+			},
+			{},{},{}...
+		]
+	}
+
+#货运方式:
+
+> 获取某国家的货运方式，返回查询结果列表
+
+	GET http://www.esaleschina.com/api/shipping-method.php
+
+	- parame country_id string 国家ID	
+	
+返回Json格式的数据
+
+	{
+		"status": 1 ,      // 获取成功：1，获取失败：0
+		"error_msg": ""    // 例如一共就10页，客户端提交请求11页，则返回错误提示信息
+		"msg": [
+			{
+				Id: 	"1", //ID
+				Name:	"1", //货运名称
+				DeliveryTime: "4~7 Work Days" //货运时间
+				Photo:	"EMS.git", //货运代表图 http://www.esaleschina.com/upload/shipping/xxx
+				Cost: "25", //运费				
+				Remark: "Over 2 kg limit each" //提示
+				CanSelect: "0/1" //该选项是否可以选择
+			},
+			{},{},{}...
+		]
+	}
