@@ -371,3 +371,52 @@
 			{},{},{}...
 		]
 	}
+
+#汇率选项:
+
+> 获取汇率选项，返回查询结果列表
+
+	GET http://www.esaleschina.com/api/currency.php
+
+	
+返回Json格式的数据
+
+	{
+		"status": 1 ,      // 获取成功：1，获取失败：0
+		"error_msg": ""    // 例如一共就10页，客户端提交请求11页，则返回错误提示信息
+		"msg": [
+			{
+				Id: 	"1", //ID
+				ShortName: "USD", //汇率简称
+				Name: "USD Dollar" //汇率全称
+				Symbol:	"$", //汇率符号
+				Value: "1" //值								
+			},
+			{},{},{}...
+		]
+	}
+
+#获取某汇率值:
+
+> 获取某汇率值，返回查询结果列表
+
+	GET http://www.esaleschina.com/api/currency-by-id.php
+
+	- parame cur_id string 汇率ID	
+	
+返回Json格式的数据
+
+	{
+		"status": 1 ,      // 获取成功：1，获取失败：0
+		"error_msg": ""    // 例如一共就10页，客户端提交请求11页，则返回错误提示信息
+		"msg": [
+			{
+				Id: 	"1", //ID
+				ShortName: "USD", //汇率简称
+				Name: "USD Dollar" //汇率全称
+				Symbol:	"$", //汇率符号
+				Value: "1" //值								
+			},
+			{},{},{}...
+		]
+	}
